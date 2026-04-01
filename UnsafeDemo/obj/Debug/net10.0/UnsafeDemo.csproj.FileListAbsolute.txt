@@ -1,0 +1,14 @@
+c:\dot-net-training\UnsafeDemo\bin\Debug\net10.0\UnsafeDemo.exe
+c:\dot-net-training\UnsafeDemo\bin\Debug\net10.0\UnsafeDemo.deps.json
+c:\dot-net-training\UnsafeDemo\bin\Debug\net10.0\UnsafeDemo.runtimeconfig.json
+c:\dot-net-training\UnsafeDemo\bin\Debug\net10.0\UnsafeDemo.dll
+c:\dot-net-training\UnsafeDemo\bin\Debug\net10.0\UnsafeDemo.pdb
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.GeneratedMSBuildEditorConfig.editorconfig
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.AssemblyInfoInputs.cache
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.AssemblyInfo.cs
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.csproj.CoreCompileInputs.cache
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.dll
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\refint\UnsafeDemo.dll
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.pdb
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\UnsafeDemo.genruntimeconfig.cache
+c:\dot-net-training\UnsafeDemo\obj\Debug\net10.0\ref\UnsafeDemo.dll
