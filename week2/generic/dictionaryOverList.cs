@@ -61,59 +61,89 @@
 
 // the above code is not efficient as we are finding a object so in that case dictionary is the suitable collection to use.
 
-using System;
+// using System;
 
-namespace DictionaryOverList
-{
-    public class DictionaryOverList
-    {
-        public static void Main()
-        {
-            Country country1 = new Country() { Code="AUS",  Name="AUSTRALIA", Capital="Canberra" };
-            Country country2 = new Country() { Code="IND",  Name="INDIA", Capital="New Delhi" };
-            Country country3 = new Country() { Code="USA",  Name="UNITED STATES", Capital="Washington D.C." };
-            Country country4 = new Country() { Code="GBR",  Name="UNITED KINGDOM", Capital="London" };
-            Country country5 = new Country() { Code="CAN",  Name="CANADA", Capital="Ottawa" };
+// namespace DictionaryOverList
+// {
+//     public class DictionaryOverList
+//     {
+//         public static void Main()
+//         {
+//             Country country1 = new Country() { Code="AUS",  Name="AUSTRALIA", Capital="Canberra" };
+//             Country country2 = new Country() { Code="IND",  Name="INDIA", Capital="New Delhi" };
+//             Country country3 = new Country() { Code="USA",  Name="UNITED STATES", Capital="Washington D.C." };
+//             Country country4 = new Country() { Code="GBR",  Name="UNITED KINGDOM", Capital="London" };
+//             Country country5 = new Country() { Code="CAN",  Name="CANADA", Capital="Ottawa" };
 
 
-            Dictionary<string, Country> dictCountries = new Dictionary<string, Country>();
-            dictCountries.Add(country1.Code, country1);
-            dictCountries.Add(country2.Code, country2);
-            dictCountries.Add(country3.Code, country3);
-            dictCountries.Add(country4.Code, country4);
-            dictCountries.Add(country5.Code, country5);
+//             Dictionary<string, Country> dictCountries = new Dictionary<string, Country>();
+//             dictCountries.Add(country1.Code, country1);
+//             dictCountries.Add(country2.Code, country2);
+//             dictCountries.Add(country3.Code, country3);
+//             dictCountries.Add(country4.Code, country4);
+//             dictCountries.Add(country5.Code, country5);
             
-            string strUserChoice = string.Empty;
-            do
-            {
-                Console.WriteLine("Please enter country code");
-                string strCountryCode = Console.ReadLine().ToUpper();
+//             string strUserChoice = string.Empty;
+//             do
+//             {
+//                 Console.WriteLine("Please enter country code");
+//                 string strCountryCode = Console.ReadLine().ToUpper();
 
-                Country resultCountry = dictCountries.ContainsKey(strCountryCode) ? dictCountries[strCountryCode] : null;
+//                 Country resultCountry = dictCountries.ContainsKey(strCountryCode) ? dictCountries[strCountryCode] : null;
 
-                if(resultCountry == null)
-                {
-                    Console.WriteLine("Country code not valid");
-                }
-                else
-                {
-                    Console.WriteLine("Name = {0}, Capital={1}", resultCountry.Name, resultCountry.Capital);
-                }
+//                 if(resultCountry == null)
+//                 {
+//                     Console.WriteLine("Country code not valid");
+//                 }
+//                 else
+//                 {
+//                     Console.WriteLine("Name = {0}, Capital={1}", resultCountry.Name, resultCountry.Capital);
+//                 }
 
-                do
-                {
-                    Console.WriteLine("Do you want to continue - YES or NO?");
-                    strUserChoice = Console.ReadLine().ToUpper();
-                } while(strUserChoice != "NO" && strUserChoice != "YES");
+//                 do
+//                 {
+//                     Console.WriteLine("Do you want to continue - YES or NO?");
+//                     strUserChoice = Console.ReadLine().ToUpper();
+//                 } while(strUserChoice != "NO" && strUserChoice != "YES");
 
-            } while(strUserChoice == "YES");
-        }
-    }
+//             } while(strUserChoice == "YES");
+//         }
+//     }
 
-    public class Country
+//     public class Country
+//     {
+//         public String Name { get; set; }
+//         public String Code { get; set; }
+//         public String Capital { get; set; }
+//     }
+// }
+
+
+
+// Using ParallelEnumerable.ForAll() Method to Iterate a Dictionary Collection in C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace GenericsDemo
+{
+    class Program
     {
-        public String Name { get; set; }
-        public String Code { get; set; }
-        public String Capital { get; set; }
+        static void Main()
+        {
+            //Creating a Dictionary with Key and value both are string type using Collection Initializer
+            Dictionary<string, string> dictionaryCountries = new Dictionary<string, string>
+            {
+                { "UK", "United Kingdom" },
+                { "USA", "United State of America" },
+                { "IND", "India" },
+                { "PAK", "Pakistan" },
+                { "SL", "Srilanka" }
+            };
+
+            Console.WriteLine($"Iterating Dictionary Using AsParallel().ForAll Method");
+            dictionaryCountries.AsParallel()
+            .ForAll(entry => Console.WriteLine(entry.Key + " : " + entry.Value));
+        }
     }
 }
