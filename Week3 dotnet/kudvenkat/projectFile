@@ -1,0 +1,40 @@
+ASP.NET Core Project File
+-> .csproj(c#) or .vbproj (visual basics) depending on the programming language used.
+-> no need to unload the project to edit the project File
+-> File or Folder references are no longer included in the project file.
+-> The file system determines what files and folders belong to the project.
+
+contents of a project file:
+-> TargetFramework:
+    Specifies the target framework for the application
+    To specify a target framework we use target framework moniker (TFM)
+    <TargetFramework>net10.0</TargetFramework> (net10.0 is the TFM )
+
+    Naming convections used for the TFM
+    Name                    Abbreviation                TFM
+    .NET Framework          net                         net451 (version 4.5.1)
+                                                        net472
+    
+    .NET core               netcoreapp                  netcoreapp1.0
+                                                        netcoreapp2.2
+
+
+-> AspNetCoreHostingModel
+    Specifies how the application should be hosted.
+    InProcess or OutOfProcess
+
+    InProcess hosts the app inside of the IIS worker process (w3wp.exe)
+    OutOfProcess hosting model forward web requests to a backend ASP.NET Core app running the Kestrel app
+    
+    default is  OutOfProcess hosting.
+
+
+-> PackageReference
+    Used to Include a reference to the NuGet package that is installed for the application.
+    Metapackage - Microsoft.AspNetCore.App
+    A Metapackage has no content of its own.
+    It just contains a list of dependencies (other packages)
+
+    When version is not specified, an implicit version is specified by the SDK.
+
+    Rely on the implicit version rather than explicitly setting the version number on the package reference.

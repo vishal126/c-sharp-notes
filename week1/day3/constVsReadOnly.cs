@@ -6,6 +6,7 @@
 // const float PI = 3.14f;
 
 // If you are not initializing the const variable at the time of its declaration, then you will get a compiler error.
+
 // using System;
 // namespace ConstDemo
 // {
@@ -198,5 +199,3 @@
 //         }
 //     }
 // }
-
-

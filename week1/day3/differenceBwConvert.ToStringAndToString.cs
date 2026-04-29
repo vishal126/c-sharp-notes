@@ -25,7 +25,7 @@
 // }
 
 
-// . Let see what happens when we use the Convert.Tostring() method with the above example.
+// Let see what happens when we use the Convert.Tostring() method with the above example.
 // using System;
 // namespace UnderstandingObjectClassMethods
 // {

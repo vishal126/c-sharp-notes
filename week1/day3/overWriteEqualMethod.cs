@@ -106,47 +106,47 @@
 // Now, if you want the Equals method to check the values stored inside the object instead of the reference address, then we need to override the Equals method inside the Customer class and if the value is equal then we need to return TRUE.
 
 // Overriding the Equals Method of the Object Class in C#:
-using System;
-namespace UnderstandingEqualsMethod
-{
-    public class Program
-    {
-        public static void Main()
-        {
-            Customer C1 = new Customer();
-            C1.FirstName = "Pranaya";
-            C1.LastName = "Rout";
+// using System;
+// namespace UnderstandingEqualsMethod
+// {
+//     public class Program
+//     {
+//         public static void Main()
+//         {
+//             Customer C1 = new Customer();
+//             C1.FirstName = "Pranaya";
+//             C1.LastName = "Rout";
 
-            Customer C2 = new Customer();
-            C2.FirstName = "Pranaya";
-            C2.LastName = "Rout";
+//             Customer C2 = new Customer();
+//             C2.FirstName = "Pranaya";
+//             C2.LastName = "Rout";
 
-            Console.WriteLine($"C1 == C2: {C1 == C2}");
-            Console.WriteLine($"C1.Equals(C2): {C1.Equals(C2)}");
-        }
-    }
-    public class Customer
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+//             Console.WriteLine($"C1 == C2: {C1 == C2}");
+//             Console.WriteLine($"C1.Equals(C2): {C1.Equals(C2)}");
+//         }
+//     }
+//     public class Customer
+//     {
+//         public string FirstName { get; set; }
+//         public string LastName { get; set; }
 
-        public override bool Equals(object obj)
-        {
-            // If the passed object is null, return False
-            if (obj == null)
-            {
-                return false;
-            }
-            // If the passed object is not Customer Type, return False
-            if (!(obj is Customer))
-            {
-                return false;
-            }
-            return (this.FirstName == ((Customer)obj).FirstName)
-                && (this.LastName == ((Customer)obj).LastName);
-        }
-    }
-}
+//         public override bool Equals(object obj)
+//         {
+//             // If the passed object is null, return False
+//             if (obj == null)
+//             {
+//                 return false;
+//             }
+//             // If the passed object is not Customer Type, return False
+//             if (!(obj is Customer))
+//             {
+//                 return false;
+//             }
+//             return (this.FirstName == ((Customer)obj).FirstName)
+//                 && (this.LastName == ((Customer)obj).LastName);
+//         }
+//     }
+// }
 
 // The GetHashCode() Requirement
 // If you override Equals(), you must override GetHashCode(). Why?

@@ -21,7 +21,7 @@ namespace problem3
                 }
                 reverse(i, j-1, wordToReverse);
                 i=j;
-                while(wordToReverse[i]==' ')
+                while(i<wordToReverse.Length && (wordToReverse[i]==' ' || wordToReverse[i] == '.'))
                 {
                     i++;
                 }
@@ -29,7 +29,10 @@ namespace problem3
             }
             reverse(i, j, wordToReverse);
 
-            Console.WriteLine($"{wordToReverse}");
+            foreach(var ch in wordToReverse)
+            {
+                Console.WriteLine($"{ch}");
+            }
         }
 
         public static void reverse(int i, int j, char[] wordToReverse)

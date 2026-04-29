@@ -1,0 +1,17 @@
+What is asp.net core
+-> It is a cross platform, high-performance, open source framework for building modern, cloud based, internet connected applications.
+-> It is a redisign of asp.net 4.x
+
+Core benefits and features
+-> cross platform
+-> one programming model for MVC and Web API
+   (both the mvc controller class and the ASP.NET web api controllers class inherit from the same Controller base class and returns IActionResult)
+   IActionResult ----> ViewResult
+                   --> JsonResult
+-> Dependency Injection
+-> Testability
+-> Open-Source
+-> Modular (with middleware components)
+   Both request and response pipelines are composed using the middleware components
+   Rich set of built-in components are provided out of the box
+   custom middleware components can also be created
