@@ -51,3 +51,48 @@
 //         return HttpNotFound("We didn't find that action, sorry!");
 //     }
 // }
+
+
+// In modern ASP.NET Core, Microsoft realized developers use these so often that they built helper methods directly into the Controller for almost every status code imaginable. You rarely have to use the new keyword anymore!
+
+// HttpNotFoundResult (The 404 Error)
+// public IActionResult GetUserProfile(int id)
+// {
+//     var user = _context.Users.Find(id);
+
+//     // If the database returns nothing, trigger a 404!
+//     if (user == null) 
+//     {
+//         return NotFound("Sorry, we couldn't find that user."); 
+//     }
+
+//     return View(user);
+// }
+
+
+// HttpUnauthorizedResult
+// public IActionResult DeleteDatabase()
+// {
+//     // If they aren't logged in, block them with a 401
+//     if (!User.Identity.IsAuthenticated)
+//     {
+//         return Unauthorized("You must be logged in to do this.");
+//     }
+
+//     // ... delete logic here
+//     return Content("Deleted!");
+// }
+
+
+// HttpStatusCodeResult
+// public IActionResult BadGateway()
+// {
+//     // 502 is the official internet code for a Bad Gateway
+//     return StatusCode(502, "I have no idea what this error means either.");
+// }
+
+// public IActionResult CorruptedData()
+// {
+//     // 400 is the code for a Bad Request (user sent bad data)
+//     return BadRequest("The form data was corrupted."); 
+// }
