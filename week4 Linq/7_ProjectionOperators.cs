@@ -223,7 +223,7 @@ namespace Demo
 
             
             // select student name along with all the subjects
-            // var result = Student.GetAllStudents().SelectMany(s => s.Subjects, (studnet, subject) => new { StudentName = studnet.Name, Subject = subject});
+            // var result = Student.GetAllStudents().SelectMany(s => s.Subjects, (student, subject) => new { StudentName = student.Name, Subject = subject});
 
             // var result = from student in Student.GetAllStudents()
             //              from subject in student.Subjects

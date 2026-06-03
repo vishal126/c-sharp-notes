@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "HttpClientApi.Controllers.JokesController",
+    "Method": "GetJoke",
+    "RelativePath": "api/Jokes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HttpClientApi.Controllers.UniversityController",
+    "Method": "GetJokes",
+    "RelativePath": "api/University/jokes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HttpClientApi.Controllers.UniversityController",
+    "Method": "GetJokesV1",
+    "RelativePath": "api/University/jokes/v1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HttpClientApi.Controllers.UniversityController",
+    "Method": "GetListV1",
+    "RelativePath": "api/University/v1/{country}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HttpClientApi.Controllers.UniversityController",
+    "Method": "GetListV2",
+    "RelativePath": "api/University/v2/{country}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HttpClientApi.Controllers.UniversityController",
+    "Method": "GetListV3",
+    "RelativePath": "api/University/v3/{country}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "country",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
